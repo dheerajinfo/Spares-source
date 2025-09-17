@@ -1,0 +1,3 @@
+{
+  "code": "import React from 'react';\n\nfunction CommandAction({\n  children,\n  className = '',\n  onClick\n}) {\n  return (\n     <button onClick={onClick}\n      className={`bg-white/10 text-white flex items-center gap-3 text-sm font-normal border border-white/20 tracking-wide rounded transition hover:bg-opacity-90 ${className}`}\n    >\n      {children}\n    </button>\n  )\n}\n\nexport default CommandAction;\n"
+}

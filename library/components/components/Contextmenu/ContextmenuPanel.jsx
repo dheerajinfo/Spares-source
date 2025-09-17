@@ -1,0 +1,11 @@
+import React from 'react';
+
+function ContextmenuPanel({children, className = ''}) {
+  return (
+     <div className={`flex flex-col gap-3 py-6 pl-3 pr-6 rounded h-fit ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export default ContextmenuPanel;
