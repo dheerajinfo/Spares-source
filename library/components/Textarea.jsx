@@ -1,3 +1,5 @@
+import React from "react";
+import { cn } from "../utils/cn";
 
 function Textarea({
   value,
@@ -16,8 +18,7 @@ function Textarea({
       rows={rows}
       cols={cols}
       disabled={disabled}
-      className={`border border-white/10 shadow-none rounded tracking-widest default:border-white default:shadow-none disabled:border disabled:border-black/5
-      ${className}`}
+      className={cn("border border-white/10 shadow-none rounded tracking-widest default:border-white default:shadow-none disabled:border disabled:border-black/5", className)}
     />
   );
 }

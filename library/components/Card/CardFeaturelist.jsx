@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CardFeaturelist({ children, className = '', icon }) {
   const fallbackIcon = (
@@ -22,7 +23,7 @@ function CardFeaturelist({ children, className = '', icon }) {
   return (
     <div className="grid grid-cols-[auto_1fr] items-center gap-3">
       {icon || fallbackIcon}
-      <p className={`text-sm ${className}`}>{children}</p>
+      <p className={cn("text-sm", className)}>{children}</p>
     </div>
   );
 }

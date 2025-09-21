@@ -1,8 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
+
 
 function DrawerDescription({children, className = ''}) {
   return (
-    <p className={`text-sm font-normal tracking-wider ${className}`}>
+    <p className={cn("text-sm font-normal tracking-wider", className)}>
       {children}
     </p>
   )

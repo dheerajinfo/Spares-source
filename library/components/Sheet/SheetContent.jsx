@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function SheetContent({children, className = ''}) {
   return (
-    <div className={`flex flex-col ${className}`}>
+    <div className={cn("flex flex-col", className)}>
       {children}
     </div>
   )

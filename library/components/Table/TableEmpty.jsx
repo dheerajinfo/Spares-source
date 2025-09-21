@@ -1,5 +1,5 @@
-// TableEmpty.jsx
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function TableEmpty({ icon, message = "No data to show", colSpan = 5, className = "" }) {
   const defaultIcon = (
@@ -31,7 +31,7 @@ function TableEmpty({ icon, message = "No data to show", colSpan = 5, className 
 
   return (
     <tr>
-      <td colSpan={colSpan} className={`py-10 text-center ${className}`}>
+      <td colSpan={colSpan} className={cn("py-10 text-center", className)}>
         <div className="flex flex-col items-center justify-center text-opacity-40 text-tiny">
           {icon || defaultIcon}
           <p className="mt-4 mb-8">{message}</p>

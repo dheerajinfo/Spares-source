@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 function SidebarCollapsible({ children, className = '', icon, label}) {
 
@@ -14,8 +15,7 @@ function SidebarCollapsible({ children, className = '', icon, label}) {
     <div className='bg-black flex flex-col items-start'>
       <button
         onClick={() => setOpenCollapsible(!openCollapsible)}
-        className={`bg-black flex gap-4 items-center h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
-      >
+        className={cn("bg-black flex gap-4 items-center h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90", className)}>
         <span>{label}</span>
         <span>{icon || defaultIcon}</span>
       </button>

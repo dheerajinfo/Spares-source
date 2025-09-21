@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { cn } from "../../utils/cn";
 
 function MonthNav({
   className = "",
@@ -92,10 +93,10 @@ const handlePrev = () => {
   let newYear = selectedYear;
 
   if (newIndex < 0) {
-    newIndex = 11; // December
+    newIndex = 11; 
     newYear -= 1;
-    setSelectedYear(newYear);          // ✅ Update local state
-    onYearChange?.(newYear);           // ✅ Notify parent
+    setSelectedYear(newYear);          
+    onYearChange?.(newYear);           
   }
 
   setSelectedIndex(newIndex);
@@ -109,8 +110,8 @@ const handleNext = () => {
   if (newIndex > 11) {
     newIndex = 0; // January
     newYear += 1;
-    setSelectedYear(newYear);          // ✅ Update local state
-    onYearChange?.(newYear);           // ✅ Notify parent
+    setSelectedYear(newYear);          
+    onYearChange?.(newYear);           
   }
 
   setSelectedIndex(newIndex);
@@ -131,7 +132,7 @@ const handleNext = () => {
 
   return (
     <div
-      className={`w-full rounded-t-md px-3 h-12 flex items-center justify-between gap-4 ${className}`}
+      className={cn("w-full rounded-t-md px-3 h-12 flex items-center justify-between gap-4", className)}
     >
       <button
         className="w-8 h-8 flex items-center justify-center"

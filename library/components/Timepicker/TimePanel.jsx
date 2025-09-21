@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { cn } from "../../utils/cn";
 
 function TimePanel({ className = "", onSelect, onClose, selected }) {
   const panelRef = useRef(null);
@@ -20,8 +21,7 @@ function TimePanel({ className = "", onSelect, onClose, selected }) {
   return (
     <div
       ref={panelRef}
-      className={`p-6 rounded-4 flex flex-col gap-4 ${className}`}
-    >
+      className={cn("p-6 rounded-4 flex flex-col gap-4", className)}>
       <div className="flex flex-row gap-4">
         <div className="flex flex-col gap-2 w-6 max-h-40 overflow-y-auto overflow-x-hidden noscrollbar">
           {hours.map((h) => (

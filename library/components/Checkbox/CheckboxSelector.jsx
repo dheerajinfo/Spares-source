@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function CheckboxSelector({
   id,
@@ -12,7 +13,7 @@ function CheckboxSelector({
   return (
     <label
       htmlFor={id}
-      className={`flex items-center gap-2 cursor-pointer select-none ${className}`}
+      className={cn("flex items-center gap-2 cursor-pointer select-none", className)}
     >
       <input
         id={id}

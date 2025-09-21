@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CommandButton({children, className = '', icon, onClick}) {
 
@@ -10,7 +11,7 @@ function CommandButton({children, className = '', icon, onClick}) {
 
   );
   return (
-    <button onClick={onClick} className={`flex flex-row items-center justify-between rounded-4 h-10 w-full px-6 ${className}`}>
+    <button onClick={onClick} className={cn("flex flex-row items-center justify-between rounded-4 h-10 w-full px-6", className)}>
         {children}
         {icon || defaultIcon}
     </button>

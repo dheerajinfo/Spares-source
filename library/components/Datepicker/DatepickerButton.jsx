@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function DatepickerButton({
   children,
@@ -17,7 +18,7 @@ function DatepickerButton({
     </svg> );
   return (
     <button onClick={onClick}
-      className={`flex items-center justify-between gap-3 px-5 text-sm font-normal tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
+      className={cn("flex items-center justify-between gap-3 px-5 text-sm font-normal tracking-wide rounded transition hover:bg-opacity-90", className)}
     >
       {children}
       {icon || defaultIcon}

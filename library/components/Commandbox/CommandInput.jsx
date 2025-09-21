@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CommandInput({
   className = '',
@@ -23,7 +24,7 @@ function CommandInput({
         type={type}
         placeholder={placeholder}
         onChange={onChange}
-        className={`text-sm px-2 py-1 border border-white/10 rounded w-full placeholder:text-white placeholder:opacity-60 placeholder:text-xs placeholder:tracking-wider ${className}`}
+        className={cn("text-sm px-2 py-1 border border-white/10 rounded w-full placeholder:text-white placeholder:opacity-60 placeholder:text-xs placeholder:tracking-wider", className)}
     />
     </div>
   )

@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import { cn } from '../../utils/cn';
 
 const UploadButton = forwardRef(function UploadButton(
   { 
@@ -32,7 +33,7 @@ const UploadButton = forwardRef(function UploadButton(
 
   return (
     <label
-      className={`px-5 py-2 text-sm rounded tracking-wide cursor-pointer transition hover:bg-opacity-90 flex items-center gap-3 ${className}`}
+      className={cn("px-5 py-2 text-sm rounded tracking-wide cursor-pointer transition hover:bg-opacity-90 flex items-center gap-3", className)}
     >
       {icon || defaultIcon}
       {label}

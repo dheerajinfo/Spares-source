@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 function ContextSubmenu({ children, className = '', icon, label }) {
   const defaultIcon = (
@@ -16,7 +17,7 @@ function ContextSubmenu({ children, className = '', icon, label }) {
       onMouseLeave={() => setOpenSubmenu(false)} 
     >
       <button
-        className={`flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
+        className={cn("flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90", className)}
       >
         <span>{label}</span>
         <span>{icon || defaultIcon}</span>

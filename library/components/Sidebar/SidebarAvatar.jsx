@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function SidebarAvatar({ children, iconsize = 16, className= '', color = 'white', stroke='1.75' }) {
   const fallbackIcon = (
@@ -23,7 +24,7 @@ function SidebarAvatar({ children, iconsize = 16, className= '', color = 'white'
   );
 
   return <>
-    <div className={`bg-white bg-opacity-5 h-8 w-8 rounded-full flex items-center justify-center ${className}`}>
+    <div className={cn("bg-white bg-opacity-5 h-8 w-8 rounded-full flex items-center justify-center", className)}>
         {children || fallbackIcon}
     </div>
   </>;

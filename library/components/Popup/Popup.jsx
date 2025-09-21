@@ -1,9 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function Popup({children, className = '' }) {
   return (
     <>
-      <div className={`relative ${className}`}>
+      <div className={cn("relative", className)}>
         {children}
       </div>  
     </>

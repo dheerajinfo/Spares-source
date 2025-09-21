@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function UploadFile({ file, onDelete, className = "", iconColor = "black" }) {
   const link = (
@@ -47,7 +48,7 @@ function UploadFile({ file, onDelete, className = "", iconColor = "black" }) {
 
   return (
     <div className="flex items-center gap-3">
-      <p className={`flex flex-row items-center gap-1 ${className}`}>
+      <p className={cn("flex flex-row items-center gap-1", className)}>
         {link} {file ? `Selected file: ${file.name}` : "No file chosen"}
       </p>
 

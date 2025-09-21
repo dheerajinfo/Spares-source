@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function InputForm({
   id,
@@ -17,7 +18,7 @@ function InputForm({
       value={value}
       onChange={onChange}
       disabled={disabled}
-      className={`text-sm text-white px-2 py-1 bg-black border border-white border-opacity-10 rounded placeholder:opacity-60  ${className}`}
+      className={cn("text-sm text-white px-2 py-1 bg-black border border-white border-opacity-10 rounded placeholder:opacity-60", className)}
     />
   );
 }

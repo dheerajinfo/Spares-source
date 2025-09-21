@@ -1,4 +1,6 @@
 import React from "react";
+import { cn } from "../../utils/cn";
+
 
 function DrawerPanel({
   className = "",
@@ -23,7 +25,7 @@ function DrawerPanel({
 
   return (
     <div
-      className={`w-full h-3/4 fixed bottom-0 right-0 z-50 bg-black transform ${className}`}
+      className={cn("w-full h-3/4 fixed bottom-0 right-0 z-50 bg-black transform", className)}
     >
       <div className="flex flex-col gap-2 py-3">
         <div>

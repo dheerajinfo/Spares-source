@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function DrawerTitle({children, className = ''}) {
   return (
-    <h3 className={`text-xl font-bold tracking-wider ${className}`}>
+    <h3 className={cn("text-xl font-bold tracking-wider", className)}>
         {children}
     </h3>
   )

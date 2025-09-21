@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function DrawerUser({
     children,
@@ -7,7 +8,7 @@ function DrawerUser({
     className = ''
 }) {
   return (
-    <div className={`flex flex-row gap-3 items-start ${className}`}>
+    <div className={cn("flex flex-row gap-3 items-start",className)}>
         <div>
             {children}
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { cn } from '../../utils/cn';
 
 function CardProfileimage({ children, size = 16, color = 'white', stroke='1.75', className='' }) {
   const fallbackIcon = (
@@ -24,7 +25,7 @@ function CardProfileimage({ children, size = 16, color = 'white', stroke='1.75',
 
   return (
     <>
-        <div className= {`w-10 h-10 rounded-full object-cover flex items-center justify-center ${className}`}>
+        <div className= {cn("w-10 h-10 rounded-full object-cover flex items-center justify-center", className)}>
             {children || fallbackIcon}
         </div>
     </>

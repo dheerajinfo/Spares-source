@@ -1,9 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CollapsibleItem({children, className = ''}) {
   return (
     <>
-        <p className={`text-sm font-normal ${className}`}>
+        <p className={cn("text-sm font-normal", className)}>
             {children}
         </p>
     </>

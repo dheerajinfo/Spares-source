@@ -1,9 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function AlertDescription({children, className = '' }) {
   return (
     <>
-      <div className={`text-sm ${className}`}>
+      <div className={cn("text-sm", className)}>
         {children}
       </div>
     </>

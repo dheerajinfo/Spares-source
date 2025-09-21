@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { cn } from "../../utils/cn";
 
 function DayNav({
   className = "",
@@ -30,7 +31,6 @@ function DayNav({
     ];
   }, [isLeapYear]);
 
-  // Store selections with full date context
   const [selectedDays, setSelectedDays] = useState([]);
 
   const daysInMonth = daysInMonths[month];
@@ -53,7 +53,6 @@ function DayNav({
   const handleDayClick = (day) => {
     if (!day) return;
 
-    // Create a unique key for this day in this month/year
     const dayKey = `${year}-${month}-${day}`;
 
     if (multiple) {
@@ -74,9 +73,7 @@ function DayNav({
   };
 
   return (
-    <div
-      className={`w-full rounded-b-4 text-sm ${className}`}
-    >
+    <div className={cn("w-full rounded-b-4 text-sm", className)}>
       <div className="grid grid-cols-7 p-4 text-center font-medium border-b border-white/20">
         {weekdays.map((day, index) => (
           <div key={index}>{day}</div>

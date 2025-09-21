@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function Sidebarclose({onClick, className = '', size, icon, children}) {
   const maximizeIcon = (
@@ -8,7 +9,7 @@ function Sidebarclose({onClick, className = '', size, icon, children}) {
   );
   return (
     <>
-      <button onClick={onClick} className={`${className}`}>
+      <button onClick={onClick} className={cn(className)}>
         {icon || maximizeIcon}
         {children}
       </button>

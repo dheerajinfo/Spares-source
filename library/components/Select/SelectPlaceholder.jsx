@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function SelectPlaceholder({children, className = '', icon, onClick}) {
     const defaultIcon = (
@@ -18,7 +19,7 @@ function SelectPlaceholder({children, className = '', icon, onClick}) {
     </svg>
   );
   return (
-    <button onClick={onClick} className={`flex flex-row items-center justify-between w-full ${className}`}>
+    <button onClick={onClick} className={cn("flex flex-row items-center justify-between w-full", className)}>
         {children} 
         {icon || defaultIcon}
     </button>

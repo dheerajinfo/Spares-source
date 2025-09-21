@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropdownSubmenuitems from './DropdownSubmenuitems';
+import { cn } from '../../utils/cn';
 
 function DropdownSubmenu({
   children,
@@ -20,7 +20,7 @@ function DropdownSubmenu({
     <div className='relative flex flex-row items-center '>
       <button
         onClick={() => setOpenSubmenu(!openSubmenu)}
-        className={`bg-black flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
+        className={cn("bg-black flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90", className)}
       >
         <span>{label}</span>
         <span>{icon || defaultIcon}</span>

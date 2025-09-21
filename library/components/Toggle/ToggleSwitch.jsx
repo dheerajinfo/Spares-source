@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 function ToggleSwitch({ 
   defaultChecked = false, 
@@ -18,14 +19,15 @@ function ToggleSwitch({
   return (
     <button
       onClick={handleToggle}
-      disabled={disabled} 
-      className={`
-        w-9 h-6 flex items-center rounded-full p-1 transition-colors
-        ${checked ? 'bg-black' : 'bg-black/30'}
-        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        ${className}
-      `}
+      disabled={disabled}
+      className={cn(
+        "w-9 h-6 flex items-center rounded-full p-1 transition-colors",
+        checked ? "bg-black" : "bg-black/30",
+        disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
+        className
+      )}
     >
+
       <div
         className={`
           w-4 h-4 bg-white rounded-full shadow-md transform transition-transform

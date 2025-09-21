@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { cn } from '../../utils/cn';
 
 function LinkDropdown({
   children,
@@ -33,7 +34,7 @@ function LinkDropdown({
     >
       <button
         onClick={() => setOpenLinkDropdown(prev => !prev)}
-        className={`text-white flex items-center justify-center gap-3  text-sm font-medium tracking-wide rounded transition hover:bg-white hover:bg-opacity-10 hover:rounded-4 ${buttonclassName}`}
+        className={cn("text-white flex items-center justify-center gap-3  text-sm font-medium tracking-wide rounded transition hover:bg-white hover:bg-opacity-10 hover:rounded-4", buttonclassName)}
       >
         <span>{label}</span>
         <span>
@@ -58,7 +59,7 @@ function LinkDropdown({
       </button>
 
       {showDropdown && (
-        <div className={`absolute top-full left-0 min-w-max h-fit flex flex-col gap-2 justify-start items-start mt-[6px] text-sm z-10 rounded-4 ${className}`}>
+        <div className={cn("absolute top-full left-0 min-w-max h-fit flex flex-col gap-2 justify-start items-start mt-[6px] text-sm z-10 rounded-4", className)}>
           {children}
         </div>
       )}

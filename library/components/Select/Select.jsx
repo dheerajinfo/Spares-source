@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function Select({children, className = ''}) {
   return (
-    <div className={`relative rounded ${className}`}>
+    <div className={cn("relative rounded", className)}>
       {children}
     </div>
   )

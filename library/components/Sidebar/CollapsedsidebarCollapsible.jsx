@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 function CollapsedsidebarCollapsible({
   children,
@@ -14,7 +15,7 @@ function CollapsedsidebarCollapsible({
       viewBox="0 0 6 9"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="pointer-events-none" // Prevent SVG hover
+      className="pointer-events-none" 
     >
       <path
         d="M1.5 7.5L4.5 4.5L1.5 1.5"
@@ -32,8 +33,7 @@ function CollapsedsidebarCollapsible({
       <div className="relative w-full flex items-center">
         <button
           onClick={() => setOpenCollapsible(!openCollapsible)}
-          className={`bg-black flex gap-4 items-center h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
-        >
+          className={cn("bg-black flex gap-4 items-center h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90", className)}>
           <span className="relative group">
             {label}
 

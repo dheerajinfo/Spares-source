@@ -1,8 +1,9 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function Timeline({ children, className = "" }) {
   return (
-    <div className={`flex flex-col relative ${className}`}>
+    <div className={cn("flex flex-col relative", className)}>
       {children}
     </div>
   );

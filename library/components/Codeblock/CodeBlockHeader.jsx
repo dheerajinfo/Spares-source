@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function CodeBlockHeader({ codeTabs, activeTab, onTabChange, iconSize = 12, copied, handleCopy, className = '' }) {
    const copyIcon = (
@@ -14,7 +15,7 @@ function CodeBlockHeader({ codeTabs, activeTab, onTabChange, iconSize = 12, copi
     </svg>
   );
   return (
-    <div className={`h-12 border-b border-white/5 rounded-t-md flex items-center justify-between px-4 ${className}`}>
+    <div className={cn("h-12 border-b border-white/5 rounded-t-md flex items-center justify-between px-4", className)}>
 
       <div className="flex items-center gap-6">
         {codeTabs.map((tab, index) => (

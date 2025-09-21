@@ -1,10 +1,11 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function ContextmenuArea({ children, className = "", onContextMenu }) {
   return (
     <div
       onContextMenu={onContextMenu}
-      className={`${className} relative`}
+      className={cn("relative", className)}
     >
       {children}
     </div>

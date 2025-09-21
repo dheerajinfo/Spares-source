@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function ShowmoreButton({
   children,
@@ -7,7 +8,7 @@ function ShowmoreButton({
 }) {
   return (
     <button onClick={onClick}
-      className={`flex items-center justify-center gap-3 text-sm font-normal tracking-wide transition ${className}`}
+      className={cn("flex items-center justify-center gap-3 text-sm font-normal tracking-wide transition", className)}
     >
       {children}
     </button>

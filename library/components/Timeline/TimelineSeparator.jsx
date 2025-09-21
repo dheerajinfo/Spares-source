@@ -1,8 +1,9 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function TimelineSeparator({ children, className = "" }) {
   return (
-    <div className={`flex flex-col items-center mr-4 ${className}`}>
+    <div className={cn("flex flex-col items-center mr-4", className)}>
       {children}
     </div>
   );

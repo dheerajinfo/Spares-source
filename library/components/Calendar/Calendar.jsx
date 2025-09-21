@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { cn } from '../../utils/cn';
 import MonthNav from './MonthNav';
 import DayNav from './DayNav';
 
@@ -7,7 +8,7 @@ function Calendar({ className = '', multiple = false, onSelect }) {
   const [year, setYear] = useState(2025);
 
   return (
-    <div className={`max-w-[288px] rounded-4 ${className}`}>
+    <div className={cn("max-w-[288px] rounded-4", className)}>
       <MonthNav
         onMonthSelect={(monthName) => setMonth(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].indexOf(monthName))}
         onYearChange={(newYear) => setYear(newYear)}

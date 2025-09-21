@@ -1,9 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function TableCell({ children, className = '', ...props }) {
   return (
     <td
-      className={`w-auto flex items-center px-6 ${className}`}
+      className={cn("w-auto flex items-center px-6", className)}
       {...props}
     >
       {children}

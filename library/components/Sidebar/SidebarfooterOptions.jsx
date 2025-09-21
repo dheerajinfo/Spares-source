@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
-import Separator from '../Separator';
+import { cn } from '../../utils/cn';
 
 
 function SidebarfooterOptions({className = '', children, icon}) {
@@ -37,7 +37,7 @@ function SidebarfooterOptions({className = '', children, icon}) {
       </button>
     
      {showOptions && (
-      <div className={`absolute left-full bottom-0 ${className}`} >
+      <div className={cn("absolute left-full bottom-0", className)} >
         {children}
       </div>
       )}

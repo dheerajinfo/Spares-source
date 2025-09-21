@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { cn } from '../../utils/cn';
+
 
 function SubmenuCollapsible({ children, className = '', icon, label}) {
 
@@ -14,7 +16,7 @@ function SubmenuCollapsible({ children, className = '', icon, label}) {
     <div className='flex flex-col items-start'>
       <button
         onClick={() => setOpenCollapsible(!openCollapsible)}
-        className={`flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
+        className={cn("flex gap-4 items-center justify-between h-8 w-full text-sm tracking-wide rounded transition hover:bg-opacity-90", className)}
       >
         <span>{label}</span>
         <span>{icon || defaultIcon}</span>

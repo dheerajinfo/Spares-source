@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -17,7 +18,7 @@ function CodeBlock({
   className
 }) {
   return (
-    <div className={`${className}`}>
+    <div className={cn(className)}>
       <div className="codeblock-container">
         <div
           className="codeblock-content hide-scrollbar"

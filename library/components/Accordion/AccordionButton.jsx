@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function AccordionButton({
   children,
@@ -31,7 +32,7 @@ function AccordionButton({
   return (
     <button
       onClick={onClick}
-      className={`flex flex-row items-center justify-between text-base font-normal tracking-wide ${className}`}
+      className={cn("flex flex-row items-center justify-between text-base font-normal tracking-wide", className)}
     >
       <span>{children}</span>
       {icon || defaultIcon}

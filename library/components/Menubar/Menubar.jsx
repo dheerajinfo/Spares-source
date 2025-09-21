@@ -1,9 +1,10 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function Menubar({ children, className = '' }) {
 
   return (
-    <div className={`relative w-fit h-fit flex flex-row justify-start items-start gap-0 ${className}`}>
+    <div className={cn("w-fit h-fit flex flex-row justify-start items-start gap-0", className)}>
       {children}
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function RadioButton({ id, name, value, selectedValue, onChange, className = '' }) {
   return (
@@ -9,7 +10,7 @@ function RadioButton({ id, name, value, selectedValue, onChange, className = '' 
       value={value}
       checked={selectedValue === value}
       onChange={() => onChange(value)}
-      className={`cursor-pointer appearance-none w-3 h-3 rounded-full border border-opacity-100 ${className}`}
+      className={cn("cursor-pointer appearance-none w-3 h-3 rounded-full border border-opacity-100", className)}
     />
   );
 }

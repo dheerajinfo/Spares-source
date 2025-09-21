@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CollapsedsidebarIconbutton({
   tooltipText = '',
@@ -27,8 +28,10 @@ function CollapsedsidebarIconbutton({
       </div>
 
       <div
-        className={`invisible z-50 group-hover:visible absolute ${getPositionClasses()} ${className}
-        bg-black bg-opacity-90 text-white text-sm rounded ml-6 px-3 py-1 shadow-lg z-10 whitespace-nowrap transition-opacity duration-200`}
+        className={cn("invisible z-50 group-hover:visible absolute bg-black bg-opacity-90 text-white text-sm rounded ml-6 px-3 py-1 shadow-lg whitespace-nowrap transition-opacity duration-200",
+        getPositionClasses(),
+        className
+        )}
       >
         {tooltipText}
       </div>

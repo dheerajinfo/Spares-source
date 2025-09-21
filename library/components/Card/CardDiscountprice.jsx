@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CardDiscountprice({children, className = ''}) {
   return (
-    <p className={`text-base font-semibold ${className}`}>
+    <p className={cn("text-base font-semibold", className)}>
       {children}
     </p>
   )

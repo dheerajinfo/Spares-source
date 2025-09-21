@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function MenuInput({
   className = '',
@@ -15,7 +16,7 @@ function MenuInput({
       type={type}
       placeholder={placeholder}
       onChange={onChange}
-      className={`text-sm px-2 py-1 border border-white border-opacity-10 rounded w-full placeholder:opacity-60 placeholder:text-xs placeholder:tracking-wider ${className}`}
+      className={cn("text-sm px-2 py-1 border border-white border-opacity-10 rounded w-full placeholder:opacity-60 placeholder:text-sm placeholder:tracking-wider", className)}
     />
   )
 }

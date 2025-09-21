@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../utils/cn";
 
 function Split({ children, cols = 2, className = "" }) {
   const colClass = {
@@ -14,7 +15,10 @@ function Split({ children, cols = 2, className = "" }) {
 
   return (
     <div
-      className={`flex flex-col w-full lg:grid ${colClass} ${className}`}
+      className={cn("flex flex-col w-full lg:grid",
+        colClass,
+        className
+      )}
     >
       {children}
     </div>

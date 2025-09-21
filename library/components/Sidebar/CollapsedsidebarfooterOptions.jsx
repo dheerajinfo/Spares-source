@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
-import Separator from '../Separator';
-import SidebarAvatar from './SidebarAvatar';
+import { cn } from '../../utils/cn';
 
 
 function CollapsedsidebarfooterOptions({className = '', children, optionsButton}) {
@@ -30,7 +29,7 @@ function CollapsedsidebarfooterOptions({className = '', children, optionsButton}
       </button>
     
      {showOptions && (
-      <div className={`absolute left-full bottom-0 rounded ${className}`} >
+      <div className={cn("absolute left-full bottom-0 rounded", className)} >
         {children}
       </div>
       )}

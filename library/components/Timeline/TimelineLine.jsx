@@ -1,8 +1,9 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function TimelineLine({ className = "" }) {
   return (
-    <div className={`w-[1px] ${className}`} />
+    <div className={cn("w-[1px]", className)} />
   );
 }
 

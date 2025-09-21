@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { cn } from '../../utils/cn';
 
 function ToastButton({
   label,
@@ -24,8 +25,7 @@ function ToastButton({
             onClick(); 
             setNotify(true);
         }}
-        className={`flex items-center justify-center gap-3 px-5 h-8 text-sm font-normal tracking-wide rounded transition hover:bg-opacity-90 ${className}`}
-      >
+        className={cn("flex items-center justify-center gap-3 px-5 h-8 text-sm font-normal tracking-wide rounded transition hover:bg-opacity-90", className)}>
         {label}
       </button>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function SheetClose({className = '', onClick, icon}) {
     const defaultIcon = (
@@ -7,7 +8,7 @@ function SheetClose({className = '', onClick, icon}) {
     </svg>
   );
   return (
-    <button onClick={onClick} className={`${className}`}>
+    <button onClick={onClick} className={cn(className)}>
         <span>{icon || defaultIcon}</span>
     </button>
   )

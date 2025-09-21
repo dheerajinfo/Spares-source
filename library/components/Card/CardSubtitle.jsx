@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CardSubtitle({children, className = ''}) {
   return (
-    <p className={`${className}`}>
+    <p className={cn(className)}>
       {children}
     </p>
   )

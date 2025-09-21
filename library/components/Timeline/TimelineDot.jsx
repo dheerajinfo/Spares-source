@@ -1,9 +1,10 @@
 import React from "react";
+import { cn } from "../../utils/cn";
 
 function TimelineDot({ className = ""}) {
 
   return (
-    <div className={`w-3 h-3 rounded-full ${className}`}  />
+    <div className={cn("w-3 h-3 rounded-full", className)}  />
   );
 }
 

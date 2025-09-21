@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function Sidebaropen({onClick, className = '', size, icon}) {
   const minimizeIcon = (
@@ -9,7 +10,7 @@ function Sidebaropen({onClick, className = '', size, icon}) {
   );
   return (
     <>
-      <button onClick={onClick} className={`${className}`}>
+      <button onClick={onClick} className={cn(className)}>
         {icon || minimizeIcon}
       </button>  
     </>

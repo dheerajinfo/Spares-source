@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function AccordionContent({children, className = ''}) {
   return (
-    <p className={`text-base font-normal ${className}`}>{children}</p>
+    <p className={cn("text-base font-normal", className)}>{children}</p>
   )
 }
 

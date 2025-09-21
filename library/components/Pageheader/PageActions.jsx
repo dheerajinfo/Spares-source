@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function PageActions({children, className = ''}) {
   return (
-    <div className={`flex flex-row ${className}`}>
+    <div className={cn("flex flex-row", className)}>
       {children}
     </div>
   )

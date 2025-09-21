@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../../utils/cn';
 
 function PageTabs({children, className = ''}) {
   return (
-    <div className={`w-full ${className}`}>
+    <div className={cn("w-full", className)}>
       {children}
     </div>
   )

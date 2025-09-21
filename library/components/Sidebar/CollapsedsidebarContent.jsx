@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function CollapsedsidebarContent({ children, className = '' }) {
   return (
-    <div className={`flex-grow relative custom-scrollbar ${className}`}>
+    <div className={cn("flex-grow relative custom-scrollbar", className)}>
         {children}
     </div>
   );

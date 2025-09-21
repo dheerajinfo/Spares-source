@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function PageSubtitle({children, className = ''}) {
   return (
-    <p className={`text-xs font-extralight ${className}`}>
+    <p className={cn("text-xs font-extralight", className)}>
       {children}
     </p>
   )

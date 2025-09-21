@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../utils/cn';
 
 function TableHeader({ children, className = '', ...props }) {
   return (
-    <thead className={className} {...props}>
+    <thead className={cn(className)} {...props}>
       {children}
     </thead>
   );
